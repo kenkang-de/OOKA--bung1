@@ -1,4 +1,4 @@
-package org.bonn.ooka.buchungssystem.ss2022;
+package a1;
 
 
 import java.sql.*;
@@ -68,7 +68,7 @@ public class DBAccess {
 		}
 	}
 	
-	
+	//gibt mir List string
 	public List<String> getObjects( int type, String value  ){
 		Statement st;
 		ResultSet rs;
