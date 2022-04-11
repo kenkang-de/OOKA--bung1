@@ -10,6 +10,7 @@ public class Client {
         Scanner scanner = new Scanner(System.in);
         String input;
         do {
+            System.out.println("Search Keyword: ");
             input = scanner.next();
             List<Hotel> hotelByName = hotelRetrieval.getHotelByName(input);
             for (Hotel hotel : hotelByName) {
