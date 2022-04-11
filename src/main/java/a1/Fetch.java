@@ -10,7 +10,7 @@ public class Fetch extends Proxy {
         this.dbAccess = new DBAccess();
     }
 
-    public Hotel[] getHotelByName(String name) {
+    public List<Hotel> getHotelByName(String name) {
         this.dbAccess.openConnection();
         List<String> result = this.dbAccess.getObjects(DBAccess.HOTEL, name);
         List<Hotel> hotels = new ArrayList<>();
@@ -23,7 +23,7 @@ public class Fetch extends Proxy {
             }
         }
         this.dbAccess.closeConnection();
-        return hotels.toArray(new Hotel[0]);
+        return hotels;
     }
 
 

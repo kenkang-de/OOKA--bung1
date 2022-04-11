@@ -1,15 +1,18 @@
 package a1;
 
+import java.util.List;
+
 public class HotelRetrieval implements Hotelsuche {
-    private final Proxy fetch;
+    public static Proxy fetch;
+    public static Proxy cache;
 
     public HotelRetrieval() {
-
-        this.fetch = new Fetch();
+        if (cache == null) cache = new Cache();
+        if (fetch == null) fetch = new Fetch();
     }
 
     @Override
-    public Hotel[] getHotelByName(String name) {
-        return fetch.getHotelByName(name);
+    public List<Hotel> getHotelByName(String name) {
+        return cache.getHotelByName(name);
     }
 }

@@ -1,8 +1,7 @@
 package a1;
 
+import java.util.List;
+
 public interface Hotelsuche {
-    Hotel[] getHotelByName(String name);
-    /*    Hotel[]+ openSession()*/
-
-
+    List<Hotel> getHotelByName(String name);
 }

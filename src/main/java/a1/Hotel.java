@@ -5,6 +5,12 @@ public class Hotel {
     final private String name;
     final private String location;
 
+    public Hotel(String id, String name, String location) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+    }
+
     public String getId() {
         return id;
     }
@@ -19,16 +25,6 @@ public class Hotel {
 
     @Override
     public String toString() {
-        return "Hotel{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", location='" + location + '\'' +
-                '}';
-    }
-
-    public Hotel(String id, String name, String location) {
-        this.id = id;
-        this.name = name;
-        this.location = location;
+        return "Hotel{" + "id='" + id + '\'' + ", name='" + name + '\'' + ", location='" + location + '\'' + '}';
     }
 }
