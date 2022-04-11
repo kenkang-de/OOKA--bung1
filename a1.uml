@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>a1</OriginalElement>
+  <nodes>
+    <node x="142.7291666666668" y="434.0">a1.Fetch</node>
+    <node x="142.7291666666668" y="281.5">a1.Cache</node>
+    <node x="1275.6646505376343" y="404.5">a1.Client</node>
+    <node x="-328.1666666666665" y="355.0">a1.DBAccess</node>
+    <node x="359.0" y="-91.0">a1.Hotel</node>
+    <node x="694.625" y="159.5">a1.Hotelsuche</node>
+    <node x="864.3521505376344" y="359.5">a1.HotelRetrieval</node>
+    <node x="511.54065860215064" y="397.0">a1.Proxy</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="a1.Cache" target="a1.Hotel" relationship="DEPENDENCY">
+      <point x="122.49983333333319" y="-31.0" />
+      <point x="409.0" y="289.0" />
+      <point x="409.0" y="299.0" />
+      <point x="436.125" y="299.0" />
+      <point x="0.125" y="93.5" />
+    </edge>
+    <edge source="a1.HotelRetrieval" target="a1.Fetch" relationship="CREATE">
+      <point x="0.0" y="49.5" />
+      <point x="986.8521505376344" y="491.0" />
+      <point x="122.5" y="18.5" />
+    </edge>
+    <edge source="a1.Client" target="a1.HotelRetrieval" relationship="CREATE">
+      <point x="-74.49965053763435" y="0.0" />
+      <point x="1193.0" y="431.5" />
+      <point x="1193.0" y="409.0" />
+      <point x="122.49984946236566" y="0.0" />
+    </edge>
+    <edge source="a1.Hotelsuche" target="a1.Hotel" relationship="DEPENDENCY">
+      <point x="0.0" y="-27.0" />
+      <point x="817.125" y="2.5" />
+      <point x="77.0" y="0.0" />
+    </edge>
+    <edge source="a1.Fetch" target="a1.DBAccess" relationship="CREATE">
+      <point x="-122.5" y="-13.0" />
+      <point x="116.5" y="0.0" />
+    </edge>
+    <edge source="a1.HotelRetrieval" target="a1.Hotel" relationship="DEPENDENCY">
+      <point x="15.0" y="-49.5" />
+      <point x="1001.8521505376344" y="17.5" />
+      <point x="77.0" y="15.0" />
+    </edge>
+    <edge source="a1.Client" target="a1.Hotel" relationship="DEPENDENCY">
+      <point x="0.0" y="-27.0" />
+      <point x="1350.1646505376343" y="-12.5" />
+      <point x="77.0" y="-15.0" />
+    </edge>
+    <edge source="a1.Fetch" target="a1.Proxy" relationship="GENERALIZATION">
+      <point x="-1.6666666681430797E-4" y="-38.5" />
+      <point x="265.229" y="419.0" />
+      <point x="424.0" y="419.0" />
+      <point x="424.0" y="441.5" />
+      <point x="-122.49965860215065" y="17.5" />
+    </edge>
+    <edge source="a1.HotelRetrieval" target="a1.Proxy" relationship="DEPENDENCY">
+      <point x="-122.5" y="15.0" />
+      <point x="122.5" y="0.0" />
+    </edge>
+    <edge source="a1.Proxy" target="a1.Hotel" relationship="DEPENDENCY">
+      <point x="0.0" y="-27.0" />
+      <point x="634.0406586021506" y="32.5" />
+      <point x="77.0" y="30.0" />
+    </edge>
+    <edge source="a1.HotelRetrieval" target="a1.Cache" relationship="CREATE">
+      <point x="-122.5" y="-14.0" />
+      <point x="626.0406586021506" y="395.0" />
+      <point x="626.0406586021506" y="351.0" />
+      <point x="122.5" y="31.0" />
+    </edge>
+    <edge source="a1.Cache" target="a1.HotelRetrieval" relationship="CREATE">
+      <point x="122.49983333333319" y="-1.0" />
+      <point x="409.0" y="319.0" />
+      <point x="409.0" y="476.0" />
+      <point x="1193.0" y="476.0" />
+      <point x="1193.0" y="409.0" />
+      <point x="122.49984946236566" y="0.0" />
+    </edge>
+    <edge source="a1.HotelRetrieval" target="a1.Proxy" relationship="TO_ONE">
+      <point x="-122.5" y="30.0" />
+      <point x="122.5" y="15.0" />
+    </edge>
+    <edge source="a1.Fetch" target="a1.Hotel" relationship="CREATE">
+      <point x="-122.5" y="-28.0" />
+      <point x="125.2291666666668" y="444.5" />
+      <point x="125.2291666666668" y="2.5" />
+      <point x="-77.0" y="0.0" />
+    </edge>
+    <edge source="a1.Cache" target="a1.Proxy" relationship="GENERALIZATION">
+      <point x="-1.6666666681430797E-4" y="38.5" />
+      <point x="265.229" y="419.0" />
+      <point x="424.0" y="419.0" />
+      <point x="424.0" y="441.5" />
+      <point x="-122.49965860215065" y="17.5" />
+    </edge>
+    <edge source="a1.Fetch" target="a1.DBAccess" relationship="TO_ONE">
+      <point x="-122.5" y="2.0" />
+      <point x="116.5" y="15.0" />
+    </edge>
+    <edge source="a1.HotelRetrieval" target="a1.Hotelsuche" relationship="REALIZATION">
+      <point x="-115.0" y="-49.5" />
+      <point x="54.72715053763443" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="601.0" y="221.5" />
+  <SelectedNodes>
+    <node>a1.Cache</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
